@@ -1,6 +1,11 @@
+import Footer from "./components/Footer";
+import SideBar from "./components/SideBar";
+
 function App() {
   return (
-    <h1 align="center">I'm empty yet, but not for long :3</h1>
+    <div>
+      <SideBar/>
+    </div>
   );
 }
 
