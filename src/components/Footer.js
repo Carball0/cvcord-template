@@ -1,8 +1,8 @@
-
+import "../index.css"
 const Footer = () => {
     return (
         <div>
-            <div className="fixed bottom-5 text-slate-400 font-semibold mx-auto left-1/2">
+            <div className="fixed bottom-5 text-slate-400 font-semibold mx-auto footerPos">
                 <hr/>
                 <p className="mt-1 text-center text-xs">
                     <span className="text-sm mb-2">Made from scratch by <a className="links" href="https://github.com/Carball0">@Carballo</a></span>
