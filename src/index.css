@@ -7,17 +7,23 @@ body {
     background-color: rgb(20 22 35);
 }
 
-@layer components {
-    .icon {
-      @apply relative flex items-center justify-center h-14 w-14 mt-2 mb-2 mx-auto  
-    bg-gray-400 hover:bg-indigo-400 dark:bg-gray-700  hover:text-white
-      hover:rounded-xl rounded-3xl transition-all duration-150 ease-linear
-    }
 
-    .icon-text {
-        font-size: 16px;
-        @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md
-        text-white bg-gray-700 font-semibold ease-linear
-        transition-all duration-100 scale-0 origin-left;
-    }
+
+@layer components {
+  .icon {
+    @apply relative flex items-center justify-center h-14 w-14 mt-2 mb-2 mx-auto  
+  bg-gray-400 hover:bg-indigo-400 dark:bg-gray-700  hover:text-white
+    hover:rounded-xl rounded-3xl transition-all duration-150 ease-linear
+  }
+
+  .icon-text {
+      font-size: 16px;
+      @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md
+      text-white bg-gray-700 font-semibold ease-linear
+      transition-all duration-100 scale-0 origin-left;
+  }
+
+  .links {
+      @apply text-slate-500 underline
+  }
 }

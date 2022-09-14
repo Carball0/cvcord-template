@@ -8,7 +8,7 @@ import InsertLinkIcon from '@mui/icons-material/InsertLink';
 
 const SideBar = () => {
     return (
-        <div className="fixed top-0 left-0 h-screen w-20 m-0
+        <div className="absolute top-0 left-0 h-screen w-20 m-0
                         flex flex-col bg-slate-800">
             <SideBarIcon icon={<GitHubIcon sx={{ fontSize: 42 }} />} text={"GitHub"}/>
             <SideBarIcon icon={<TwitterIcon sx={{ fontSize: 42 }} />} text={"Twitter"}/>
