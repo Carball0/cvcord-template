@@ -1,8 +1,9 @@
 const Profile = () => {
-  return (
+
+  return(
     <div>
       <section class="text-gray-600">
-        <div class="profCont container w-full ml-36 mx-auto m-10">
+        <div class="profCont container w-full mx-auto m-10">
           <div class="flex flex-wrap -m-4 md:w-96">
             <div class="p-4">
               <div class="h-full border-2 border-gray-400 border-opacity-60 rounded-xl overflow-hidden">
