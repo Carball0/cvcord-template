@@ -11,6 +11,14 @@ body {
   left: 45%;
 }
 
+.roundpic {
+  border-radius: 50%;
+}
+
+.centered {
+  align-items: center;
+}
+
 @layer components {
   .icon {
     @apply relative flex items-center justify-center h-14 w-14 mt-2 mb-2 mx-auto  

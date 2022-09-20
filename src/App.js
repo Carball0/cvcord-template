@@ -2,8 +2,9 @@ import Footer from "./components/Footer";
 import SideBar from "./components/SideBar";
 import BottomBar from "./components/BottomBar";
 import Profile from "./components/Profile";
-import './index.css';
+import Presentation from "./components/Presentation";
 import { Component } from "react";
+import './index.css';
 
 class App extends Component {
   constructor(props) {
@@ -34,8 +35,6 @@ class App extends Component {
     const { windowWidth } = this.state;
 
     const styles = {
-      white: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-      black: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
       topBarHeight: 40,
       footerMenuHeight: 50,
       showFooter: windowWidth > 768,
@@ -43,26 +42,37 @@ class App extends Component {
     };
 
     return(
-      <div className="inline-flex">
+      <div className="flex w-full">
+
         {styles.showSidebar ? (
           <SideBar/>
         ) : (
           <BottomBar/>
         )}
 
-        {styles.showFooter ? (
-          <Footer/>
-        ) : (
-          <div/>
-        )}
-        
-        {styles.showFooter ? (
-          <Profile/>
-        ) : (
-          <Profile/>
-        )}
-        
+        <div className="w-full flex-row">
+
+          {styles.showSidebar ? (
+            <Presentation bar={true}/>
+          ) : (
+            <Presentation bar={false}/>
+          )}
+
+          {styles.showFooter ? (
+            <Profile/>
+          ) : (
+            <Profile/>
+          )}
+          
+          {styles.showFooter ? (
+            <Footer/>
+          ) : (
+            <div/>
+          )}
+          
+        </div>
       </div>
+      
     )
   };
 }
