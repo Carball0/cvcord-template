@@ -1,7 +1,7 @@
 import Footer from "./components/Footer";
 import SideBar from "./components/SideBar";
 import BottomBar from "./components/BottomBar";
-import Profile from "./components/Profile";
+import Section from "./components/Section";
 import Presentation from "./components/Presentation";
 import { Component } from "react";
 import './index.css';
@@ -37,14 +37,13 @@ class App extends Component {
     const styles = {
       topBarHeight: 40,
       footerMenuHeight: 50,
-      showFooter: windowWidth > 768,
-      showSidebar: windowWidth > 768
+      responsive: windowWidth > 768
     };
 
     return(
       <div className="flex w-full">
 
-        {styles.showSidebar ? (
+        {styles.responsive ? (
           <SideBar/>
         ) : (
           <BottomBar/>
@@ -52,23 +51,32 @@ class App extends Component {
 
         <div className="w-full flex-row">
 
-          {styles.showSidebar ? (
+          {styles.responsive ? (
             <Presentation bar={true}/>
           ) : (
             <Presentation bar={false}/>
           )}
-
-          {styles.showFooter ? (
-            <Profile/>
-          ) : (
-            <Profile/>
-          )}
           
-          {styles.showFooter ? (
-            <Footer/>
-          ) : (
-            <div/>
-          )}
+          <div class="container w-full mx-auto">
+          <h2 className="mt-8 text-center tracking-wider text-3xl title-font font-medium text-gray-200 mb-2">Studies</h2>
+            {styles.responsive ? (
+              <div class="flex flex-row">
+                <Section img={"https://centros.unileon.es/eiii/files/2010/10/escuela1.jpg"} title={"Example title"}/>
+                <Section img={"https://dummyimage.com/1921x1921"} title={"Example title"}/>
+                <Section img={"https://dummyimage.com/1921x1921"} title={"Example title"}/>
+              </div>
+            ) : (
+              <div class="flex flex-col">
+                <Section img={"https://centros.unileon.es/eiii/files/2010/10/escuela1.jpg"} title={"Example title"}/>
+                <Section img={"https://dummyimage.com/1921x1921"} title={"Example title"}/>
+                <Section img={"https://dummyimage.com/1921x1921"} title={"Example title"}/>
+                <div className="h-20"/>
+              </div>
+            )}
+
+            {styles.responsive ? <Footer/> : <div/>}
+
+          </div>
           
         </div>
       </div>
