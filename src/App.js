@@ -49,16 +49,17 @@ class App extends Component {
           <BottomBar/>
         )}
 
-        <div className="w-full flex-row">
-
-          {styles.responsive ? (
-            <Presentation bar={true}/>
-          ) : (
-            <Presentation bar={false}/>
-          )}
+          <div className="w-full flex-row">
+            {styles.responsive ? (
+              <div class="flex flex-row justify-center">
+                <Presentation bar={true}/>
+              </div>
+            ) : (
+              <Presentation bar={false}/>
+            )}
           
           <div class="container w-full mx-auto">
-          <h2 className="mt-8 text-center tracking-wider text-3xl title-font font-medium text-gray-200 mb-2">Studies</h2>
+          <h2 className="mt-4 text-center tracking-wider text-3xl title-font font-medium text-gray-200 mb-2">Education</h2>
             {styles.responsive ? (
               <div class="flex flex-row">
                 <Section img={"https://centros.unileon.es/eiii/files/2010/10/escuela1.jpg"} title={"Example title"}/>
@@ -80,7 +81,6 @@ class App extends Component {
           
         </div>
       </div>
-      
     )
   };
 }
